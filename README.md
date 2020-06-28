@@ -1,4 +1,4 @@
-# dreamit-coding-task
+# vue-graphql
 
 ## Project setup
 ```
