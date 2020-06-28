@@ -4,10 +4,11 @@ import router from './router'
 import store from './store'
 import VueApollo from 'vue-apollo'
 import { apolloProvider } from './providers/apolloProvider'
-import 'bulma/bulma.sass'
-Vue.config.productionTip = false
+import 'buefy/dist/buefy.css'
 
 Vue.use(VueApollo)
+Vue.config.productionTip = false
+
 new Vue({
   router,
   store,

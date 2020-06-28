@@ -1,24 +1,35 @@
 <template>
   <div class="home">
-    <input type="text" v-model="type" />
-    <ApolloQuery :query="require('@/graphql/draw.gql')">
-      <template v-slot="{ result: { error, data } }">
-        <h2 v-if="error">
-          {{ error }}
-        </h2>
-        <div v-if="data && data.draw">
-          <h2 v-for="draw in data.draw.draws" :key="draw.date">
-            {{ draw.date }} - {{ draw.jackpot }}
-          </h2>
+    <section class="section">
+      <div class="container">
+        <div class="columns  is-vcentered">
+          <div class="column">
+            <h2 class="title">
+              Lorem, ipsum dolor.
+            </h2>
+            <p class="has-margin-bottom-25">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+              at. Incidunt delectus temporibus pariatur repudiandae excepturi
+              quo, magnam, neque magni cum fuga animi voluptates mollitia itaque
+              nihil rerum ab consequatur aperiam vitae veritatis natus, voluptas
+              aliquam sint sit! Dicta corrupti provident deleniti iste
+              doloremque in id maiores quis omnis cum?
+            </p>
+            <router-link :to="{ name: 'Lottery' }" class="button is-primary"
+              >Zu den Ziehungen</router-link
+            >
+          </div>
+          <div class="column">
+            <img src="/images/common/dummy-image.jpg" alt="Some alt Text" />
+          </div>
         </div>
-      </template>
-    </ApolloQuery>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
-  type: 'eurojackpot',
   name: 'Home',
   data() {
     return {

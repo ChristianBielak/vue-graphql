@@ -1,5 +1,5 @@
-query draw {
-  draw(type: "eurojackpot") {
+query fetchDraws($type: String!, $date: String!) {
+  draw(type: $type, date: $date) {
     draws {
       date
       numbers
