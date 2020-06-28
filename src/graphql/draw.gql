@@ -1,0 +1,15 @@
+query draw {
+  draw(type: "eurojackpot") {
+    draws {
+      date
+      numbers
+      jackpot
+      additionalNumbers
+      odds {
+        numberOfWinners
+        odd
+        winningClass
+      }
+    }
+  }
+}
